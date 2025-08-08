@@ -1,0 +1,173 @@
+---
+layout: default
+---
+<table style="width:100%;max-width:800px;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;">
+  <tr style="padding:0px">
+    <td style="padding:0px">
+      <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;">
+        <tr style="padding:0px">
+          <td style="padding:2.5%;width:60%;vertical-align:middle">
+            <h1>
+              Long-Kai Huang 
+            </h1>
+            <p style="text-align:center"><a href="https://scholar.google.com/citations?user=CaP64WUAAAAJ">Google Scholar</a> &nbsp;/&nbsp; Email: longkai [AT] comp.hkbu.edu.hk </p>
+            <p>I am an Assistant Professor with Department of Computer Science at Hong Kong Baptist University. </p>
+            <p>
+              Previously, I was a Senior Research at Tencent AI Lab.
+              I received my Ph.D. in Computer Science and Engineering from Nanyang Technological University (NTU) Singapore, supervised by Prof. <a href="https://www.cse.cuhk.edu.hk/~sinnopan/">Sinno Jialin Pan</a>, 
+              and B.Eng. in Automation from Sun Yat-Sen University, where I did my undergraduate thesis under the supervision of Prof. <a href="https://www.isee-ai.cn/~zhwshi/">Wei-Shi Zheng</a>.  
+            </p>
+            <p>My research focuses on foundational theory and applications of continual learning, meta-learning, and efficient pre-training and fine-tuning of LLMs. I am also interested in their applications to AI for science, particularly in drug discovery, protein design and single cell omics.
+            </p>
+            <p> <strong>I am seeking self-motivated PhD students and research assistants for Fall 2026</strong>. If you are interested in machine learning, large language models (LLMs), or AI for scientific applications, please feel free to email me your CV and transcript.
+            </p>
+        </tr>
+      </table>
+
+      <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;">
+        <tr>
+          <td style="padding:1%;width:100%;vertical-align:middle">
+            <h2>News</h2>
+          </td>
+        </tr>
+      </table>
+      <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;">
+        {% assign cutoff_date = '2023-12-31' | date: "%s" %}
+        {% for post in site.posts %}
+        {% for cat in post.categories %}
+        {% if cat == 'news' %}
+        {% assign post_date = post.date | date: "%s" %}
+        {% if post_date > cutoff_date %}
+        <tr>
+          <td style="padding:1%;width:75%;vertical-align:middle">
+            &bull; <h4>[{{ post.date | date: "%b %Y" }}]</h4> {{ post.info }}
+          </td>
+        </tr>
+        {% endif %}
+        {% endif %}
+        {% endfor %}
+        {% endfor %}
+      </table>
+      
+      <br>
+
+
+      <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;">
+        <tr>
+          <td style="padding:1%;width:75%;vertical-align:middle">
+            <h2 style="margin-bottom:0.0em;">Publications |</h2>  <a href="/publications_by_topic"><h2_no_color  style="margin-bottom:0.0em;">Publications by Topic</h2_no_color></a> <h2 style="margin-bottom:0.0em;"> |</h2> <a href="https://scholar.google.com/citations?user=CaP64WUAAAAJ"><h2_no_color  style="margin-bottom:0.0em;">Google Scholar</h2_no_color></a>
+            <br>
+            <p  style="margin-bottom:0.0em;padding-left:1em;">* indicates equal contributions; &dagger; indicates corresponding authors.</p>
+          </td>
+        </tr>
+      </table>
+      <table style="width:100%;border:0px;border-spacing:5px;border-collapse:separate;margin-right:auto;margin-left:auto;">
+        <tr>
+          <td style="padding:1%;width:75%;vertical-align:middle">
+            <h3 style="margin-bottom:0.0em;">Conference Papers</h3>
+          </td>
+        </tr>
+        {% assign counter = site.posts | where: 'categories', 'conference' | size %}
+        {% for post in site.posts %}
+        {% for cat in post.categories %}
+        {% if cat == 'conference' %}
+        <tr>
+          <td style="padding:0%;width:75%;vertical-align:middle; line-height:1.5;margin-bottom:0.0em;">
+            <table style="width:100%;border:0;">
+                <tr>
+                <td style="width:3%;vertical-align:top;text-align:right;padding-right:0em;">{{ counter }}.</td>
+                <td style="width:97%;text-align:left;">
+                  <h4>{{ post.title }}</h4>
+                  <br>
+                  {{ post.authors }}
+                  <br>
+                  In <em>{{ post.venue }}</em>
+                  {% if post.abbr %}
+                  (<strong>{{ post.abbr }}</strong>)
+                  {% endif %}
+                  , {{ post.year }}
+                  {% if post.award %}
+                  (<strong><emph>{{ post.award }}</emph></strong>)
+                  {% endif %}
+                </td>
+              </tr>
+            </table>
+          </td>
+        </tr>
+        {% assign counter = counter | minus: 1 %}
+        {% endif %}
+        {% endfor %}
+        {% endfor %}
+      </table>
+      <table style="width:100%;border:0px;border-spacing:5px;border-collapse:separate;margin-right:auto;margin-left:auto;">
+        <tr>
+          <td style="padding:1%;width:75%;vertical-align:middle">
+            <h3 style="margin-bottom:0.0em;">Journal Papers</h3>
+          </td>
+        </tr>
+        {% assign counter = site.posts | where: 'categories', 'journal' | size %}
+        {% for post in site.posts %}
+        {% for cat in post.categories %}
+        {% if cat == 'journal' %}
+        <tr>
+          <td style="padding:0%;width:75%;vertical-align:middle; line-height:1.5;margin-bottom:0.0em;">
+            <table style="width:100%;border:0;">
+                <tr>
+                <td style="width:3%;vertical-align:top;text-align:right;padding-right:0em;">{{ counter }}.</td>
+                <td style="width:97%;text-align:left;">
+                  <h4>{{ post.title }}</h4>
+                  <br>
+                  {{ post.authors }}
+                  <br>
+                  In <em>{{ post.venue }}</em>
+                  {% if post.abbr %}
+                  (<strong>{{ post.abbr }}</strong>)
+                  {% endif %}
+                  , {{ post.date | date: "%Y" }}
+                  {% if post.award %}
+                  (<strong><emph>{{ post.award }}</emph></strong>)
+                  {% endif %}
+                </td>
+              </tr>
+            </table>
+          </td>
+        </tr>
+        {% assign counter = counter | minus: 1 %}
+        {% endif %}
+        {% endfor %}
+        {% endfor %}
+      </table>
+
+      <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;">
+        <tr>
+          <td style="padding:1%;width:100%;vertical-align:middle">
+            <h2>Awards</h2>
+          </td>
+        </tr>
+        <tr>
+          <td style="padding:1%;width:75%;vertical-align:middle">
+            &bull; <a href="https://blog.iclr.cc/2024/05/06/iclr-2024-outstanding-paper-awards">ICLR 2024 Outstanding Paper Award Honorable Mention</a>
+          </td>
+        </tr>
+        <tr>
+          <td style="padding:1%;width:75%;vertical-align:middle">
+            &bull; <a href="https://iclr.cc/Conferences/2024/Reviewers#outstanding-reviewers">ICLR 2024 Outstanding Reviewer</a>
+          </td>
+        </tr>
+      </table>
+
+      <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;">
+        <tr>
+          <td style="padding:0px">
+            <br>
+            <p style="text-align:right;font-size:small;">
+              Source code of this website adapted from <a style="font-size:small;" href="https://jonbarron.info">this page.</a>
+            </p>
+          </td>
+        </tr>
+      </table>
+    </td>
+  </tr>
+</table>
+
+

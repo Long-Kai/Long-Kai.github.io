@@ -1,0 +1,9 @@
+---
+title:  "DrugOOD: Out-of-Distribution Dataset Curator and Benchmark for AI-Aided Drug Discovery–a Focus on Affinity Prediction Problems with Noise Annotation"
+categories: conference
+topics: ["AI4Sci", "Drug Discovery", "OOD"]
+authors: "Yuanfeng Ji, Lu Zhang, Jiaxiang Wu, Bingzhe Wu, Lanqing Li, <strong>Long-Kai Huang</strong>, Tingyang Xu, Yu Rong, Jie Ren, Ding Xue, Houtim Lai, Wei Liu, Junzhou Huang, Shuigeng Zhou, Ping Luo, Peilin Zhao, Yatao Bian"
+venue: "Proceedings of the AAAI Conference on Artificial Intelligence"
+abbr: "AAAI"
+year: "2023"
+---

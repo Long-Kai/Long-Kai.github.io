@@ -1,0 +1,10 @@
+---
+title:  "Secure Out-of-Distribution Task Generalization with Energy-Based Models"
+categories: conference
+topics: ["Meta Learning", "OOD", "EBM"]
+author: "Long-Kai Huang"
+authors: "Shengzhuang Chen, <strong>Long-Kai Huang</strong>, Jonathan Richard Schwarz, Yilun Du, Ying Wei"
+venue: "Neural Information Processing Systems"
+abbr: "NeurIPS"
+year: "2023"
+---

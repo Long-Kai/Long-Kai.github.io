@@ -1,0 +1,73 @@
+---
+layout: default
+title: Publications by Topic
+---
+
+<table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;">
+    <tr>
+    <td style="padding:1%;width:75%;vertical-align:middle">
+        <a href="/"><h2_no_color  style="margin-bottom:0.0em;">Publications</h2_no_color></a> <h2 style="margin-bottom:0.0em;">|</h2><h2 style="margin-bottom:0.0em;">Publications by Topic</h2>
+        <br>
+        <p  style="margin-bottom:0.0em;padding-left:1em;">* indicates equal contributions; &dagger; indicates corresponding authors.</p>
+    </td>
+    </tr>
+</table>
+
+<table style="width:100%;border:0px;border-spacing:5px;border-collapse:separate;margin-right:auto;margin-left:auto;">
+  {% assign topics_list = "Continual Learning,Meta Learning,Transfer Learning,Model Editing,Optimization,LLMs,AI4Sci" | split: ',' %}
+  {% for topic in topics_list %}
+    <tr>
+      <td style="padding:1%;width:75%;vertical-align:middle">
+        {% if topic == 'AI4Sci' %}
+        <h3 style="margin-bottom:0.0em;">AI for Science / Biological Language Models</h3>
+        {% else %}
+          {% if topic == 'LLMs' %}
+          <h3 style="margin-bottom:0.0em;">LLMs / ViTs </h3>
+          {% else %}
+            {% if topic == 'Optimization' %}
+            <h3 style="margin-bottom:0.0em;">Optimization / Generalization </h3>
+            {% else %}
+            <h3 style="margin-bottom:0.0em;">{{ topic }}</h3>
+            {% endif %}
+
+          {% endif %}
+        {% endif %}
+      </td>
+    </tr>
+    {% assign topic_posts = site.posts | where_exp:"post","post.topics contains topic" %}
+    {% assign topic_posts = topic_posts | sort: "date" | reverse %}
+    {% assign counter = topic_posts.size %}
+    {% for post in topic_posts %}
+      <tr>
+        <td style="padding:0%;width:75%;vertical-align:middle; line-height:1.5;margin-bottom:0.0em;">
+          <table style="width:100%;border:0;">
+            <tr>
+              <td style="width:3%;vertical-align:top;text-align:right;padding-right:0em;">{{ counter }}.</td>
+              <td style="width:97%;text-align:left;">
+                <h4>{{ post.title }}</h4>
+                <br>
+                {{ post.authors }}
+                <br>
+                In <em>{{ post.venue }}</em>
+                {% if post.abbr %}
+                  (<strong>{{ post.abbr }}</strong>)
+                {% endif %}
+                , {{ post.year }}
+                {% if post.award %}
+                  (<strong><emph>{{ post.award }}</emph></strong>)
+                {% endif %}
+              </td>
+            </tr>
+          </table>
+        </td>
+      </tr>
+      {% assign counter = counter | minus: 1 %}
+    {% endfor %}
+    {% if topic_posts.size == 0 %}
+      <tr>
+        <td style="padding:0%;width:75%;vertical-align:middle;color:#888;">No publications.</td>
+      </tr>
+    {% endif %}
+  {% endfor %}
+</table>
+

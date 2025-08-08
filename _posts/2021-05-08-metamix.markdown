@@ -1,0 +1,9 @@
+---
+title:  "Improving Generalization in Meta-learning via Task Augmentation"
+categories: conference
+topics: ["Meta Learning", "AI4Sci", "Optimization", "Drug Discovery"]
+authors: " Huaxiu Yao*, <strong>Long-Kai Huang</strong>*, Linjun Zhang, Ying Wei, Li Tian, James Zou, Junzhou Huang, Zhenhui Li"
+venue: "International Conference on Machine Learning"
+abbr: "ICML"
+year: "2021"
+---

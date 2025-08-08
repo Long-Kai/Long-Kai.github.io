@@ -1,0 +1,10 @@
+---
+title:  "Meta Continual Learning Revisited: Implicitly Enhancing Online Hessian Approximation via Variance Reduction"
+categories: conference
+topics: ["Continual Learning", "Meta Learning", "Optimization"]
+authors: "Yichen Wu, <strong>Long-Kai Huang</strong><sup>&dagger;</sup>, Renzhen Wang, Deyu Meng, Ying Wei<sup>&dagger;</sup>"
+venue: "International Conference on Learning Representations"
+abbr: "ICLR"
+award: "Oral, Outstanding Paper Award Honorable Mention"
+year: "2024"
+---
