@@ -1,5 +1,4 @@
 ---
-layout: default
 title:  "De Novo Design of Epitope-specific Antibodies via a Structure-driven Computational Workflow"
 categories: journal
 topics: ["AI4Sci", "Protein Design"]

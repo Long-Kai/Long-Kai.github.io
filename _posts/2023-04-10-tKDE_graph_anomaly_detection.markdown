@@ -1,5 +1,4 @@
 ---
-layout: default
 title:  "Improving Generalizability of Graph Anomaly Detection Models via Data Augmentation"
 categories: journal
 topics: ["Meta Learning", "Graph", "OOD"]

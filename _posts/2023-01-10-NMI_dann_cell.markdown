@@ -1,5 +1,4 @@
 ---
-layout: default
 title:  "Deep Domain Adversarial Neural Network for the Deconvolution of Cell Type Mixtures in Tissue Proteome Profiling"
 categories: journal
 topics: ["Transfer Learning", "AI4Sci", "Single Cell Omics"]

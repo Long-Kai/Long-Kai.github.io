@@ -1,5 +1,4 @@
 ---
-layout: default
 title:  "A Pre-trained Large Generative Model for Translating Single-cell Transcriptomes to Proteomes"
 categories: journal
 topics: ["AI4Sci", "Single Cell Omics"]
