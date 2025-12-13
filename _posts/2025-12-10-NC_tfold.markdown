@@ -1,0 +1,11 @@
+---
+layout: default
+title:  "De Novo Design of Epitope-specific Antibodies via a Structure-driven Computational Workflow"
+categories: journal
+topic: ["AI4Sci", "Protein Design"]
+authors: "Fang Wang*, Fan Yang*, <strong>Long-Kai Huang</strong>, Jiangning Song, Jiang Qian, Guohua Wang, Jianhua Yao."
+authors: "Fandi Wu, Yu Zhao, JiaXiang Wu, Biaobin Jiang, Bing He, <strong>Long-Kai Huang</strong>, and other 17 authors."
+venue: "Nature Communication"
+abbr: "NC"
+year: "2025"
+---
