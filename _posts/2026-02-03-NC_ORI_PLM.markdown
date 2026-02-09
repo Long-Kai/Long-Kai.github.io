@@ -3,7 +3,7 @@ title: "Functional Protein Design and Enhancement with Ontology Reinforcement It
 categories: journal
 topics: ["AI4Sci", "Protein Design"]
 authors: "Bing He*, Chenchen Qin*, Yu Zhao*, <strong>Long-Kai Huang*</strong>, Zihan Wu, Fang Wang, Fandi Wu, Fan Yang, Jianhua Yao"
-venue: "To be appeared in Nature Communication"
+venue: "Nature Communication"
 abbr: "NC"
-year: "2026"
+year: "2026 (to appear)"
 ---
