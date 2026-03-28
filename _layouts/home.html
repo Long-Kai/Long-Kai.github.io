@@ -17,9 +17,9 @@ layout: default
               I received my Ph.D. in Computer Science and Engineering from Nanyang Technological University (NTU) Singapore, supervised by Prof. <a href="https://www.cse.cuhk.edu.hk/~sinnopan/">Sinno Jialin Pan</a>, 
               and B.Eng. in Automation from Sun Yat-Sen University, where I did my undergraduate thesis under the supervision of Prof. <a href="https://www.isee-ai.cn/~zhwshi/">Wei-Shi Zheng</a>.  
             </p>
-            <p>My research centers on the theory and applications of machine learning, with emphasis on continual learning, meta-learning, and efficient pre-training and post-training of LLMs. I am also interested in AI for science, especially drug discovery, protein design, and single-cell omics.
+            <p>My research centers on the theory and applications of machine learning, with emphasis on continual learning, meta-learning, and efficient training and inference of LLMs. I am also interested in AI for science, especially  single-cell omics and drug discovery.
             </p>
-            <p> <strong>[Updates at Feb 2026] One open Ph.D. position for Fall 2026 </strong>. If you are interested in working with me on related research topics, please email me your CV and undergraduate transcript. I am also looking for RAs to work on machine learning and AI for scientific discovery.
+            <p> Open Ph.D. positions for <strong>Spring/Fall 2027</strong>. If you are interested in working with me on related research topics, please email me your CV and undergraduate transcript. I am looking for RAs to work on machine learning and AI for scientific discovery.
             </p>
         </tr>
       </table>
@@ -77,7 +77,14 @@ layout: default
                 <tr>
                 <td style="width:3%;vertical-align:top;text-align:right;padding-right:0em;">{{ counter }}.</td>
                 <td style="width:97%;text-align:left;">
+                  {% if post.pdf %}
+                  <a href="{{ post.pdf | relative_url }}"><h4>{{ post.title }}</h4></a>
+                  {% else %}
                   <h4>{{ post.title }}</h4>
+                  {% endif %} 
+                  {% if post.code %}
+                  [<a href="{{ post.code }}">code</a>]
+                  {% endif %}
                   <br>
                   {{ post.authors }}
                   <br>
@@ -138,6 +145,34 @@ layout: default
         {% endfor %}
       </table>
 
+      <table style="width:100%;border:0px;border-spacing:5px;border-collapse:separate;margin-right:auto;margin-left:auto;">
+        <tr>
+          <td style="padding:1%;width:75%;vertical-align:middle">
+            <h3 style="margin-bottom:0.0em;">Book Chapter</h3>
+          </td>
+        </tr>
+        <tr>
+          <td style="padding:0%;width:75%;vertical-align:middle; line-height:1.5;margin-bottom:0.0em;">
+            <table style="width:100%;border:0;">
+                <tr>
+                <td style="width:3%;vertical-align:top;text-align:right;padding-right:0em;">{{ counter }}.</td>
+                <td style="width:97%;text-align:left;">
+                  <h4>Transfer learning and meta-learning for drug discovery</h4>
+                  <br>
+                  Long-Kai Huang
+                  <br>
+                  In <em>Deep Learning in Drug Design</em>, Chapter 10, Academic Press, Pages 168-186, 2026
+                </td>
+              </tr>
+            </table>
+          </td>
+        </tr>
+        {% assign counter = counter | minus: 1 %}
+        {% endif %}
+        {% endfor %}
+        {% endfor %}
+      </table>
+
       <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;">
         <tr>
           <td style="padding:1%;width:100%;vertical-align:middle">
@@ -164,12 +199,12 @@ layout: default
         </tr>
         <tr>
           <td style="padding:1%;width:75%;vertical-align:middle">
-            &bull; <strong>Area Chair</strong>: ICML2026, ICLR2025
+            &bull; <strong>Area Chair</strong>: ICML26, ICLR25
           </td>
         </tr>
         <tr>
           <td style="padding:1%;width:75%;vertical-align:middle">
-            &bull; <strong>Senior Meta Reviewer</strong>: ICME2026, PRCV2025
+            &bull; <strong>Senior Meta Reviewer</strong>: ICME26, PRCV26, PRCV25
           </td>
         </tr>
       </table>
