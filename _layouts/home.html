@@ -5,9 +5,9 @@ layout: default
 <div class="top-nav">
   <div class="top-nav-container">
     <a href="#about">About Me</a>
-    <!-- <a href="#news">News</a> -->
+    <a href="#news">News</a>
     <a href="#publications">Publications</a>
-    <a href="#awards">Honors</a>
+    <a href="#awards">Awards</a>
     <a href="#services">Services</a>
   </div>
 </div>
@@ -24,11 +24,13 @@ layout: default
             <p style="text-align:center"><a href="https://scholar.google.com/citations?user=CaP64WUAAAAJ">Google Scholar</a> &nbsp;/&nbsp; Email: longkai [AT] comp.hkbu.edu.hk </p>
             <p>I am an Assistant Professor with Department of Computer Science at Hong Kong Baptist University. </p>
             <p>
-              Previously, I was a Senior Research at Tencent AI Lab and Tencent AI for Life Sciences Lab.
+              Previously, I was a Senior Research at Tencent AI Lab.
               I received my Ph.D. in Computer Science and Engineering from Nanyang Technological University (NTU) Singapore, supervised by Prof. <a href="https://www.cse.cuhk.edu.hk/~sinnopan/">Sinno Jialin Pan</a>, 
               and B.Eng. in Automation from Sun Yat-Sen University, where I did my undergraduate thesis under the supervision of Prof. <a href="https://www.isee-ai.cn/~zhwshi/">Wei-Shi Zheng</a>.  
             </p>
-            <p>My research lies at the intersection of machine learning theory and applications. I am particularly interested in understanding how ML models learn, store, and transfer knowledge, and in using these insights to develop more effective and efficient learning algorithms. My work focuses on continual learning, meta-learning, and efficient training and inference of transformer models. I am also interested in applying AI to scientific discovery, especially in life science domains such as genomics, protein design, and drug discovery.
+            <p>My research centers on the theory and applications of machine learning, with emphasis on continual learning, meta-learning, and efficient training and inference of LLMs. I am also interested in AI for science, especially  single-cell omics and drug discovery.
+            </p>
+            <p> I am looking for RAs. If you are interested in working with me on related research topics, please email me your CV. 
             </p>
         </tr>
       </table>
@@ -40,40 +42,36 @@ layout: default
           </td>
         </tr>
       </table>
-      <ul style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto; margin-top:10px;">
-        <tr>
-          <li>
-            <em>Now</em>: I am looking for RAs. If you are interested in working with me on related research topics, please email me your CV. 
-          </li>
-        </tr>
-        {% assign cutoff_date = '2025-01-01' | date: "%s" %}
+      <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto; margin-top:10px;">
+        {% assign cutoff_date = '2024-05-07' | date: "%s" %}
         {% for post in site.posts %}
         {% for cat in post.categories %}
         {% if cat == 'news' %}
         {% assign post_date = post.date | date: "%s" %}
         {% if post_date > cutoff_date %}
         <tr>
-          <li>
-            <em>[{{ post.date | date: "%Y.%m" }}]</em>: {{ post.info }}  
-          </li>
+          <td style="padding:1%;width:75%;vertical-align:middle">
+            &bull; <h4>[{{ post.date | date: "%b %Y" }}]</h4> {{ post.info }}
+          </td>
         </tr>
         {% endif %}
         {% endif %}
         {% endfor %}
         {% endfor %}
-      </ul>
+      </table>
       
       <br>
 
       <table id="publications" class="jump-target" style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto; margin-top:20px;">
         <tr>
           <td class="section-divider" style="padding:1%;width:75%;vertical-align:middle">
-            <h2 style="margin-bottom:0.0em;">Publications |</h2>  <a href="/publications_by_topic"><h2_no_color  style="margin-bottom:0.0em;">Publications by Topic</h2_no_color></a>
+            <h2 style="margin-bottom:0.0em;">Publications |</h2>  <a href="/publications_by_topic"><h2_no_color  style="margin-bottom:0.0em;">Publications by Topic</h2_no_color></a> <h2 style="margin-bottom:0.0em;"> |</h2> <a href="https://scholar.google.com/citations?user=CaP64WUAAAAJ"><h2_no_color  style="margin-bottom:0.0em;">Google Scholar</h2_no_color></a>
             <br>
             <p  style="margin-top:5px; margin-bottom:0.0em;padding-left:1em;">* indicates equal contributions; &dagger; indicates corresponding authors.</p>
           </td>
         </tr>
       </table>
+      
       <table style="width:100%;border:0px;border-spacing:5px;border-collapse:separate;margin-right:auto;margin-left:auto;">
         <tr>
           <td style="padding:1%;width:75%;vertical-align:middle">
@@ -119,6 +117,7 @@ layout: default
         {% endfor %}
         {% endfor %}
       </table>
+      
       <table style="width:100%;border:0px;border-spacing:5px;border-collapse:separate;margin-right:auto;margin-left:auto;">
         <tr>
           <td style="padding:1%;width:75%;vertical-align:middle">
@@ -168,7 +167,7 @@ layout: default
           <td style="padding:0%;width:75%;vertical-align:middle; line-height:1.5;margin-bottom:0.0em;">
             <table style="width:100%;border:0;">
                 <tr>
-                <td style="width:3%;vertical-align:top;text-align:right;padding-right:0em;">1.</td>
+                <td style="width:3%;vertical-align:top;text-align:right;padding-right:0em;">{{ counter }}.</td>
                 <td style="width:97%;text-align:left;">
                   <h4>Transfer learning and meta-learning for drug discovery</h4>
                   <br>
