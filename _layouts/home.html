@@ -1,7 +1,18 @@
 ---
 layout: default
 ---
-<table style="width:100%;max-width:800px;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;">
+
+<div class="top-nav">
+  <div class="top-nav-container">
+    <a href="#about">About Me</a>
+    <!-- <a href="#news">News</a> -->
+    <a href="#publications">Publications</a>
+    <a href="#awards">Honors</a>
+    <a href="#services">Services</a>
+  </div>
+</div>
+
+<table id="about" class="jump-target" style="width:100%;max-width:800px;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;">
   <tr style="padding:0px">
     <td style="padding:0px">
       <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;">
@@ -13,52 +24,53 @@ layout: default
             <p style="text-align:center"><a href="https://scholar.google.com/citations?user=CaP64WUAAAAJ">Google Scholar</a> &nbsp;/&nbsp; Email: longkai [AT] comp.hkbu.edu.hk </p>
             <p>I am an Assistant Professor with Department of Computer Science at Hong Kong Baptist University. </p>
             <p>
-              Previously, I was a Senior Research at Tencent AI Lab.
+              Previously, I was a Senior Research at Tencent AI Lab and Tencent AI for Life Sciences Lab.
               I received my Ph.D. in Computer Science and Engineering from Nanyang Technological University (NTU) Singapore, supervised by Prof. <a href="https://www.cse.cuhk.edu.hk/~sinnopan/">Sinno Jialin Pan</a>, 
               and B.Eng. in Automation from Sun Yat-Sen University, where I did my undergraduate thesis under the supervision of Prof. <a href="https://www.isee-ai.cn/~zhwshi/">Wei-Shi Zheng</a>.  
             </p>
-            <p>My research centers on the theory and applications of machine learning, with emphasis on continual learning, meta-learning, and efficient training and inference of LLMs. I am also interested in AI for science, especially  single-cell omics and drug discovery.
-            </p>
-            <p> I am looking for RAs. If you are interested in working with me on related research topics, please email me your CV. 
-              <!-- and undergraduate transcript. I am looking for RAs to work on machine learning and AI for scientific discovery. -->
+            <p>My research lies at the intersection of machine learning theory and applications. I am particularly interested in understanding how ML models learn, store, and transfer knowledge, and in using these insights to develop more effective and efficient learning algorithms. My work focuses on continual learning, meta-learning, and efficient training and inference of transformer models. I am also interested in applying AI to scientific discovery, especially in life science domains such as genomics, protein design, and drug discovery.
             </p>
         </tr>
       </table>
 
-      <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;">
+      <table id="news" class="jump-target" style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto; margin-top:20px;">
         <tr>
-          <td style="padding:1%;width:100%;vertical-align:middle">
-            <h2>News</h2>
+          <td class="section-divider" style="padding:1%;width:100%;vertical-align:middle">
+            <h2 style="margin-bottom:0;">News</h2>
           </td>
         </tr>
       </table>
-      <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;">
-        {% assign cutoff_date = '2024-05-07' | date: "%s" %}
+      <ul style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto; margin-top:10px;">
+        <tr>
+          <li>
+            <em>Now</em>: I am looking for RAs. If you are interested in working with me on related research topics, please email me your CV. 
+          </li>
+        </tr>
+        {% assign cutoff_date = '2025-01-01' | date: "%s" %}
         {% for post in site.posts %}
         {% for cat in post.categories %}
         {% if cat == 'news' %}
         {% assign post_date = post.date | date: "%s" %}
         {% if post_date > cutoff_date %}
         <tr>
-          <td style="padding:1%;width:75%;vertical-align:middle">
-            &bull; <h4>[{{ post.date | date: "%b %Y" }}]</h4> {{ post.info }}
-          </td>
+          <li>
+            <em>[{{ post.date | date: "%Y.%m" }}]</em>: {{ post.info }}  
+          </li>
         </tr>
         {% endif %}
         {% endif %}
         {% endfor %}
         {% endfor %}
-      </table>
+      </ul>
       
       <br>
 
-
-      <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;">
+      <table id="publications" class="jump-target" style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto; margin-top:20px;">
         <tr>
-          <td style="padding:1%;width:75%;vertical-align:middle">
-            <h2 style="margin-bottom:0.0em;">Publications |</h2>  <a href="/publications_by_topic"><h2_no_color  style="margin-bottom:0.0em;">Publications by Topic</h2_no_color></a> <h2 style="margin-bottom:0.0em;"> |</h2> <a href="https://scholar.google.com/citations?user=CaP64WUAAAAJ"><h2_no_color  style="margin-bottom:0.0em;">Google Scholar</h2_no_color></a>
+          <td class="section-divider" style="padding:1%;width:75%;vertical-align:middle">
+            <h2 style="margin-bottom:0.0em;">Publications |</h2>  <a href="/publications_by_topic"><h2_no_color  style="margin-bottom:0.0em;">Publications by Topic</h2_no_color></a>
             <br>
-            <p  style="margin-bottom:0.0em;padding-left:1em;">* indicates equal contributions; &dagger; indicates corresponding authors.</p>
+            <p  style="margin-top:5px; margin-bottom:0.0em;padding-left:1em;">* indicates equal contributions; &dagger; indicates corresponding authors.</p>
           </td>
         </tr>
       </table>
@@ -170,12 +182,14 @@ layout: default
         </tr>
       </table>
 
-      <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;">
+      <table id="awards" class="jump-target" style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto; margin-top:20px;">
         <tr>
-          <td style="padding:1%;width:100%;vertical-align:middle">
-            <h2>Awards</h2>
+          <td class="section-divider" style="padding:1%;width:100%;vertical-align:middle">
+            <h2 style="margin-bottom:0;">Awards</h2>
           </td>
         </tr>
+      </table>
+      <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto; margin-top:10px;">
         <tr>
           <td style="padding:1%;width:75%;vertical-align:middle">
             &bull; <a href="https://blog.iclr.cc/2024/05/06/iclr-2024-outstanding-paper-awards">ICLR 2024 Outstanding Paper Award Honorable Mention</a>
@@ -188,12 +202,14 @@ layout: default
         </tr>
       </table>
 
-      <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;">
+      <table id="services" class="jump-target" style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto; margin-top:20px;">
         <tr>
-          <td style="padding:1%;width:100%;vertical-align:middle">
-            <h2>Services</h2>
+          <td class="section-divider" style="padding:1%;width:100%;vertical-align:middle">
+            <h2 style="margin-bottom:0;">Services</h2>
           </td>
         </tr>
+      </table>
+      <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto; margin-top:10px;">
         <tr>
           <td style="padding:1%;width:75%;vertical-align:middle">
             &bull; <strong>Area Chair</strong>: ICML26, ICLR25
@@ -216,10 +232,8 @@ layout: default
           </h5>
         </td>
       </tr>
-</table>
+      </table>
 
     </td>
   </tr>
 </table>
-
-

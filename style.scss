@@ -29,19 +29,19 @@ th,
 tr,
 p,
 a {
-  font-family: 'Lato', Verdana, Helvetica, sans-serif;
+  font-family: "Trebuchet MS", "Lucida Grande", "Lucida Sans Unicode", Tahoma, sans-serif;
   font-size: 14px;
   font-display: auto;
 }
 
 strong {
-  font-family: 'Lato', Verdana, Helvetica, sans-serif;
+  font-family: "Trebuchet MS", "Lucida Grande", "Lucida Sans Unicode", Tahoma, sans-serif;
   font-size: 14px;
   font-display: auto;
 }
 
 emph {
-  font-family: 'Lato', Verdana, Helvetica, sans-serif;
+  font-family: "Trebuchet MS", "Lucida Grande", "Lucida Sans Unicode", Tahoma, sans-serif;
   font-size: 14px;
   font-display: auto;
   color: #CB4B16;
@@ -58,7 +58,7 @@ emph {
 // }
 
 h2 {
-  font-family: 'Lato', Verdana, Helvetica, sans-serif;
+  font-family: "Trebuchet MS", "Lucida Grande", "Lucida Sans Unicode", Tahoma, sans-serif;
   color:#CB4B16;
   font-size: 22px;
   font-display: auto;
@@ -69,7 +69,7 @@ h2 {
 }
 
 h2_no_color {
-  font-family: 'Lato', Verdana, Helvetica, sans-serif;
+  font-family: "Trebuchet MS", "Lucida Grande", "Lucida Sans Unicode", Tahoma, sans-serif;
   font-size: 20px;
   font-display: auto;
   font-weight: bold;
@@ -79,7 +79,7 @@ h2_no_color {
 }
 
 h3 {
-  font-family: 'Lato', Verdana, Helvetica, sans-serif;
+  font-family: "Trebuchet MS", "Lucida Grande", "Lucida Sans Unicode", Tahoma, sans-serif;
   color:#CB4B16;
   font-size: 16px;
   font-weight: bold;
@@ -90,7 +90,7 @@ h3 {
 }
 
 h4 {
-  font-family: 'Lato', Verdana, Helvetica, sans-serif;
+  font-family: "Trebuchet MS", "Lucida Grande", "Lucida Sans Unicode", Tahoma, sans-serif;
   font-size: 14px;
   font-weight: 700;
   font-display: auto;
@@ -100,7 +100,7 @@ h4 {
 }
 
 h5 {
-  font-family: 'Lato', Verdana, Helvetica, sans-serif;
+  font-family: "Trebuchet MS", "Lucida Grande", "Lucida Sans Unicode", Tahoma, sans-serif;
   font-size: 10px;
   font-weight: 700;
   font-display: auto;
@@ -110,7 +110,7 @@ h5 {
 }
 
 h1 {
-  font-family: 'Lato', Verdana, Helvetica, sans-serif;
+  font-family: "Trebuchet MS", "Lucida Grande", "Lucida Sans Unicode", Tahoma, sans-serif;
   font-size: 32px;
   font-weight: normal;
   font-display: auto;
@@ -152,3 +152,62 @@ span.highlight {
 // ... Otherwise it really bloats up the top of the CSS file and makes it difficult to find the start
 //@import "highlights";
 //@import "svg-icons";
+
+/* ========================================= */
+/* 自定义增加：悬浮导航栏、分割线与平滑滚动     */
+/* ========================================= */
+
+/* 开启平滑滚动 */
+html {
+  scroll-behavior: smooth;
+}
+
+/* 顶部悬浮导航栏样式 */
+.top-nav {
+  position: sticky;
+  top: 0;
+  background-color: rgba(255, 255, 255, 0.95); /* 半透明纯白背景 */
+  backdrop-filter: blur(5px);
+  border-bottom: 1px solid #eaeaea; /* 导航栏最底部的细分割线 */
+  padding: 15px 0 0 0; /* 调整内边距，让底部线条贴紧导航栏底边 */
+  z-index: 1000;
+  margin-bottom: 30px;
+}
+
+/* 限制导航栏内容宽度，与您的页面内容对齐 */
+.top-nav-container {
+  max-width: 800px; 
+  margin: 0 auto;
+  padding: 0 2.5%;
+  display: flex;
+  gap: 35px; /* 控制各个导航项之间的间距 */
+}
+
+/* 导航链接默认状态 */
+.top-nav a {
+  text-decoration: none;
+  color: #777; /* 默认灰色 */
+  font-size: 18px; /* 字体稍微调大一点以匹配图片 */
+  font-weight: 500;
+  padding-bottom: 12px; /* 文字和下划线之间的距离 */
+  border-bottom: 4px solid transparent; /* 预留 4px 的透明底边框，防止悬浮时跳动 */
+  transition: all 0.2s ease;
+}
+
+/* 鼠标悬浮时的状态 (Hover) */
+.top-nav a:hover {
+  color: #333; /* 字体颜色加深 */
+  border-bottom: 4px solid #b3b3b3; /* 出现粗的灰色下划线 */
+  text-decoration: none; /* 确保悬浮时不出现默认细下划线 */
+}
+
+/* 标题下方的低调分割线 */
+.section-divider {
+  border-bottom: 2px solid #f2f2f2; 
+  padding-bottom: 8px;
+}
+
+/* 防止点击导航跳转时，标题被悬浮导航栏遮挡 */
+.jump-target {
+  scroll-margin-top: 80px; 
+}
