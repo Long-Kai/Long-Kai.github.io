@@ -162,52 +162,78 @@ html {
   scroll-behavior: smooth;
 }
 
-/* 顶部悬浮导航栏样式 */
+/* 顶部悬浮导航栏容器 */
 .top-nav {
+  position: -webkit-sticky; /* 兼容 Safari */
   position: sticky;
   top: 0;
-  background-color: rgba(255, 255, 255, 0.95); /* 半透明纯白背景 */
+  background-color: rgba(255, 255, 255, 0.98); /* 稍微增加不透明度 */
   backdrop-filter: blur(5px);
-  border-bottom: 1px solid #eaeaea; /* 导航栏最底部的细分割线 */
-  padding: 15px 0 0 0; /* 调整内边距，让底部线条贴紧导航栏底边 */
-  z-index: 1000;
-  margin-bottom: 30px;
+  border-bottom: 1px solid #eaeaea; 
+  padding: 15px 0 0 0; 
+  z-index: 9999; /* 确保在最上层 */
+  width: 100%;
 }
 
-/* 限制导航栏内容宽度，与您的页面内容对齐 */
+/* 导航栏内容区：实现居中 */
 .top-nav-container {
   max-width: 800px; 
   margin: 0 auto;
   padding: 0 2.5%;
   display: flex;
-  gap: 35px; /* 控制各个导航项之间的间距 */
+  gap: 35px; 
+  justify-content: center; /* 【关键】让菜单项居中对齐 */
 }
 
-/* 导航链接默认状态 */
+/* 导航链接：字体与颜色 */
 .top-nav a {
-  text-decoration: none;
-  color: #777; /* 默认灰色 */
-  font-size: 18px; /* 字体稍微调大一点以匹配图片 */
+  text-decoration: none !important; /* 强制去掉下划线 */
+  color: #777 !important; /* 默认灰色，使用 !important 覆盖全局蓝颜色 */
+  font-family: "Trebuchet MS", sans-serif;
+  font-size: 18px; 
   font-weight: 500;
-  padding-bottom: 12px; /* 文字和下划线之间的距离 */
-  border-bottom: 4px solid transparent; /* 预留 4px 的透明底边框，防止悬浮时跳动 */
+  padding-bottom: 12px; 
+  border-bottom: 4px solid transparent; 
   transition: all 0.2s ease;
 }
 
-/* 鼠标悬浮时的状态 (Hover) */
+/* 鼠标悬浮效果 */
 .top-nav a:hover {
-  color: #333; /* 字体颜色加深 */
-  border-bottom: 4px solid #b3b3b3; /* 出现粗的灰色下划线 */
-  text-decoration: none; /* 确保悬浮时不出现默认细下划线 */
+  color: #333 !important; 
+  border-bottom: 4px solid #b3b3b3; 
 }
 
-/* 标题下方的低调分割线 */
+/* 新闻列表：小圆点与时间格式 (同步之前的需求) */
+.news-list {
+  list-style-type: none;
+  padding-left: 18px;
+  margin: 0;
+  li {
+    position: relative;
+    margin-bottom: 12px;
+    line-height: 1.6;
+    &::before {
+      content: "\2022";
+      font-size: 0.8em;
+      color: #555;
+      position: absolute;
+      left: -16px;
+      top: 2px;
+    }
+  }
+  .news-date {
+    font-style: italic;
+    font-weight: 700;
+    color: #444;
+    margin-right: 4px;
+  }
+}
+
 .section-divider {
   border-bottom: 2px solid #f2f2f2; 
   padding-bottom: 8px;
 }
 
-/* 防止点击导航跳转时，标题被悬浮导航栏遮挡 */
 .jump-target {
   scroll-margin-top: 80px; 
 }
