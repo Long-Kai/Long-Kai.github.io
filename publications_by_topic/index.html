@@ -30,7 +30,7 @@ title: Publications by Topic
         {% for topic in topics_list %}
           <span style="white-space: nowrap;">
             <a href="#{{ topic | slugify }}" style="font-weight: 600; text-decoration: none;">
-              {% if topic == 'AI4Sci' %}AI4Sci{% elsif topic == 'LLMs' %}LLMs{% else %}{{ topic }}{% endif %}
+              {% if topic == 'AI4Sci' %}AI4Sci{% elsif topic == 'LLMs' %}LLMs/ViTs{% elsif topic == 'Optimization' %}Optimization/Generalization{% else %}{% else %}{{ topic }}{% endif %}
             </a>
             {% unless forloop.last %}
               <span style="color: #ccc; margin: 0 10px;">|</span>
