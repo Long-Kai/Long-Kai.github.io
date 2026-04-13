@@ -5,5 +5,5 @@ topics: ["AI4Sci", "Protein Design"]
 authors: "Bing He*, Chenchen Qin*, Yu Zhao*, <strong>Long-Kai Huang*</strong>, Zihan Wu, Fang Wang, Fandi Wu, Fan Yang, Jianhua Yao"
 venue: "Nature Communication"
 abbr: "NC"
-year: "2026 (to appear)"
+year: "2026"
 ---
