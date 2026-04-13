@@ -18,7 +18,7 @@ layout: default
       <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;">
         <tr style="padding:0px">
           <td style="padding:2.5% 2.5% 0 2.5%;width:100%;vertical-align:middle">
-            <h1>Long-Kai Huang</h1>
+            <h1 style="text-align: center;">Long-Kai Huang</h1>
             <p style="text-align:center">
               <a href="https://scholar.google.com/citations?user=CaP64WUAAAAJ">Google Scholar</a> &nbsp;/&nbsp; Email: longkai [AT] comp.hkbu.edu.hk 
             </p>
@@ -30,9 +30,9 @@ layout: default
         </tr>
       </table>
 
-      <table id="news" class="jump-target" style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto; margin-top:35px;">
+      <table id="news" class="jump-target" style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto; margin-top:5px;">
         <tr>
-          <td class="section-divider" style="padding:0 1% 8px 1%;width:100%;vertical-align:middle">
+          <td class="section-divider" style="padding:0 1% 5px 1%;width:100%;vertical-align:middle">
             <h2 style="margin-bottom:0;">News</h2>
           </td>
         </tr>
@@ -40,7 +40,7 @@ layout: default
       <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto; margin-top:5px;">
         <tr>
           <td style="padding:0 1%;width:100%;vertical-align:top">
-            <ul class="news-list" style="margin: 0; padding-left: 18px;">
+            <ul class="news-list" style="margin: 5px 0 0 0; padding-left: 18px;">
               <li><em>Ongoing</em>: I am looking for RAs. If you are interested in working with me on related research topics, please email me your CV. </li>
               {% assign cutoff_date = '2025-01-01' | date: "%s" %}
               {% for post in site.posts %}
@@ -58,14 +58,14 @@ layout: default
         </tr>
       </table>
 
-      <table id="publications" class="jump-target" style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto; margin-top:35px;">
+      <table id="publications" class="jump-target" style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto; margin-top:5px;">
         <tr>
-          <td class="section-divider" style="padding:0 1% 8px 1%;width:100%;vertical-align:middle">
+          <td class="section-divider" style="padding:0 1% 5px 1%;width:100%;vertical-align:middle">
             <h2 style="margin-bottom:0.0em;">Publications |</h2>  <a href="/publications_by_topic"><h2_no_color  style="margin-bottom:0.0em;">Publications by Topic</h2_no_color></a> <h2 style="margin-bottom:0.0em;"> |</h2> <a href="https://scholar.google.com/citations?user=CaP64WUAAAAJ"><h2_no_color  style="margin-bottom:0.0em;">Google Scholar</h2_no_color></a>
           </td>
         </tr>
         <tr>
-          <td style="padding: 8px 1% 0 1%; font-size: 13px; color: #555;">
+          <td style="padding: 5px 1% 0 1%; font-size: 13px; color: #555; width: 100%;">
             * indicates equal contributions; &dagger; indicates corresponding authors.
           </td>
         </tr>
@@ -73,7 +73,7 @@ layout: default
       
       <table style="width:100%;border:0px;border-spacing:5px;border-collapse:separate;margin-right:auto;margin-left:auto;">
         <tr>
-          <td style="padding:1%;width:100%;vertical-align:middle">
+          <td style="padding:5px 1% 0 1%;width:100%;vertical-align:middle">
             <h3 style="margin-bottom:0.0em;">Conference Papers</h3>
           </td>
         </tr>
@@ -82,10 +82,10 @@ layout: default
         {% for cat in post.categories %}
         {% if cat == 'conference' %}
         <tr>
-          <td style="padding:0%;width:100%;vertical-align:middle; line-height:1.5;margin-bottom:0.0em;">
+          <td style="padding:0%;width:100%;vertical-align:middle; line-height:1.5;">
             <table style="width:100%;border:0;">
                 <tr>
-                <td style="width:3%;vertical-align:top;text-align:right;padding-right:0em;">{{ counter }}.</td>
+                <td style="width:3%;vertical-align:top;text-align:right;padding-right:0.5em;">{{ counter }}.</td>
                 <td style="width:97%;text-align:left;">
                   {% if post.pdf %}
                   <a href="{{ post.pdf | relative_url }}"><h4>{{ post.title }}</h4></a>
@@ -116,73 +116,10 @@ layout: default
         {% endfor %}
         {% endfor %}
       </table>
-      
-      <table style="width:100%;border:0px;border-spacing:5px;border-collapse:separate;margin-right:auto;margin-left:auto;">
-        <tr>
-          <td style="padding:1%;width:100%;vertical-align:middle">
-            <h3 style="margin-bottom:0.0em;">Journal Papers</h3>
-          </td>
-        </tr>
-        {% assign counter = site.posts | where: 'categories', 'journal' | size %}
-        {% for post in site.posts %}
-        {% for cat in post.categories %}
-        {% if cat == 'journal' %}
-        <tr>
-          <td style="padding:0%;width:100%;vertical-align:middle; line-height:1.5;margin-bottom:0.0em;">
-            <table style="width:100%;border:0;">
-                <tr>
-                <td style="width:3%;vertical-align:top;text-align:right;padding-right:0em;">{{ counter }}.</td>
-                <td style="width:97%;text-align:left;">
-                  <h4>{{ post.title }}</h4>
-                  <br>
-                  {{ post.authors }}
-                  <br>
-                  In <em>{{ post.venue }}</em>
-                  {% if post.abbr %}
-                  (<strong>{{ post.abbr }}</strong>)
-                  {% endif %}
-                  , {{ post.date | date: "%Y" }}
-                  {% if post.award %}
-                  (<strong><emph>{{ post.award }}</emph></strong>)
-                  {% endif %}
-                </td>
-              </tr>
-            </table>
-          </td>
-        </tr>
-        {% assign counter = counter | minus: 1 %}
-        {% endif %}
-        {% endfor %}
-        {% endfor %}
-      </table>
 
-      <table style="width:100%;border:0px;border-spacing:5px;border-collapse:separate;margin-right:auto;margin-left:auto;">
+      <table id="awards" class="jump-target" style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto; margin-top:5px;">
         <tr>
-          <td style="padding:1%;width:100%;vertical-align:middle">
-            <h3 style="margin-bottom:0.0em;">Book Chapter</h3>
-          </td>
-        </tr>
-        <tr>
-          <td style="padding:0%;width:100%;vertical-align:middle; line-height:1.5;margin-bottom:0.0em;">
-            <table style="width:100%;border:0;">
-                <tr>
-                <td style="width:3%;vertical-align:top;text-align:right;padding-right:0em;">1.</td>
-                <td style="width:97%;text-align:left;">
-                  <h4>Transfer learning and meta-learning for drug discovery</h4>
-                  <br>
-                  Long-Kai Huang
-                  <br>
-                  In <em>Deep Learning in Drug Design</em>, Chapter 10, Academic Press, Pages 168-186, 2026
-                </td>
-              </tr>
-            </table>
-          </td>
-        </tr>
-      </table>
-
-      <table id="awards" class="jump-target" style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto; margin-top:35px;">
-        <tr>
-          <td class="section-divider" style="padding:0 1% 8px 1%;width:100%;vertical-align:middle">
+          <td class="section-divider" style="padding:0 1% 5px 1%;width:100%;vertical-align:middle">
             <h2 style="margin-bottom:0;">Awards</h2>
           </td>
         </tr>
@@ -190,7 +127,7 @@ layout: default
       <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto; margin-top:5px;">
         <tr>
           <td style="padding:0 1%;width:100%;vertical-align:top">
-            <ul class="news-list" style="margin: 0; padding-left: 18px;">
+            <ul class="news-list" style="margin: 5px 0 0 0; padding-left: 18px;">
               <li><strong><a href="https://blog.iclr.cc/2024/05/06/iclr-2024-outstanding-paper-awards">ICLR 2024 Outstanding Paper Award Honorable Mention</a></strong></li>
               <li><a href="https://iclr.cc/Conferences/2024/Reviewers#outstanding-reviewers">ICLR 2024 Outstanding Reviewer</a></li>
             </ul>
@@ -198,9 +135,9 @@ layout: default
         </tr>
       </table>
 
-      <table id="services" class="jump-target" style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto; margin-top:35px;">
+      <table id="services" class="jump-target" style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto; margin-top:5px;">
         <tr>
-          <td class="section-divider" style="padding:0 1% 8px 1%;width:100%;vertical-align:middle">
+          <td class="section-divider" style="padding:0 1% 5px 1%;width:100%;vertical-align:middle">
             <h2 style="margin-bottom:0;">Services</h2>
           </td>
         </tr>
@@ -208,7 +145,7 @@ layout: default
       <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto; margin-top:5px;">
         <tr>
           <td style="padding:0 1%;width:100%;vertical-align:top">
-            <ul class="news-list" style="margin: 0; padding-left: 18px;">
+            <ul class="news-list" style="margin: 5px 0 0 0; padding-left: 18px;">
               <li><strong>Area Chair</strong>: ICML26, ICLR25 </li>
               <li><strong>Senior Meta Reviewer</strong>: ICME26, PRCV26, PRCV25</li>
             </ul>
@@ -216,7 +153,7 @@ layout: default
         </tr>
       </table>
 
-      <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto; margin-top:40px;">
+      <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto; margin-top:30px;">
       <tr>
         <td style="padding:0px; text-align:right;">
           <h5>
