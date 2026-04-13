@@ -15,10 +15,12 @@ title: Publications by Topic
 <table style="width:100%;max-width:800px;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto; margin-top:20px;">
   <tr>
     <td style="padding:0px">
-      <h2 style="margin-bottom:0.0em;">Publications by Topic</h2>
-      <div style="padding: 0 1% 15px 1%; font-size: 13px; color: #555;">
-        * indicates equal contributions; &dagger; indicates corresponding authors.
-      </div>
+    
+    <h2 style="margin-bottom:0.0em;">Publications by Topic</h2>
+    <br>
+    <td style="padding: 10px 1% 0 1%; font-size: 14px; color: #555; width: 100%;">
+      * indicates equal contributions; &dagger; indicates corresponding authors.
+    </td>
 
       <table style="width:100%;border:0px;border-spacing:5px;border-collapse:separate;margin-right:auto;margin-left:auto;">
         {% assign topics_list = "Continual Learning,Meta Learning,Transfer Learning,Model Editing,Optimization,LLMs,AI4Sci" | split: ',' %}
@@ -37,7 +39,7 @@ title: Publications by Topic
               {% endif %}
             </td>
           </tr>
-
+          
           {% assign topic_posts = site.posts | where_exp:"post","post.topics contains topic" %}
           {% assign topic_posts = topic_posts | sort: "date" | reverse %}
           {% assign counter = topic_posts.size %}
