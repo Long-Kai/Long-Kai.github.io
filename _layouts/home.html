@@ -24,9 +24,9 @@ layout: default
               <a href="https://scholar.google.com/citations?user=CaP64WUAAAAJ">Google Scholar</a> &nbsp;/&nbsp; Email: longkai [AT] comp.hkbu.edu.hk 
             </p>
             <p>I am an Assistant Professor with Department of Computer Science at Hong Kong Baptist University.</p>
-            <p>Previously, I was a Senior Research at Tencent AI Lab. I received my Ph.D. in Computer Science and Engineering from Nanyang Technological University (NTU) Singapore.</p>
-            <p>My research centers on the theory and applications of machine learning, with emphasis on continual learning, meta-learning, and efficient training and inference of LLMs.</p>
-            <p>I am looking for RAs. If you are interested in working with me on related research topics, please email me your CV.</p>
+            <p>Previously, I was a Senior Research at Tencent AI Lab and Tencent AI for Life Sciences Lab.
+              I received my Ph.D. in Computer Science and Engineering from Nanyang Technological University (NTU) Singapore, supervised by Prof. <a href="https://www.cse.cuhk.edu.hk/~sinnopan/">Sinno Jialin Pan</a>, and B.Eng. in Automation from Sun Yat-Sen University, where I did my undergraduate thesis under the supervision of Prof. <a href="https://www.isee-ai.cn/~zhwshi/">Wei-Shi Zheng</a>. </p>
+            <p>My research lies at the intersection of machine learning theory and applications. I am particularly interested in understanding how ML models learn, store, and transfer knowledge, and in using these insights to develop more effective and efficient learning algorithms. My work focuses on continual learning, meta-learning, and efficient training and inference of transformer models. I am also interested in applying AI to scientific discovery, especially in life science domains such as genomics, protein design, and drug discovery.</p>
           </td>
         </tr>
       </table>
@@ -42,7 +42,8 @@ layout: default
         <tr>
           <td style="padding:1%;width:100%;vertical-align:top">
             <ul class="news-list">
-              {% assign cutoff_date = '2024-05-07' | date: "%s" %}
+              <li><em>Ongoing</em>: I am looking for RAs. If you are interested in working with me on related research topics, please email me your CV. </li>
+              {% assign cutoff_date = '2025-01-01' | date: "%s" %}
               {% for post in site.posts %}
                 {% if post.categories contains 'news' %}
                   {% assign post_date = post.date | date: "%s" %}
@@ -57,7 +58,7 @@ layout: default
           </td>
         </tr>
       </table>
-      
+
       <br>
 
       <table id="publications" class="jump-target" style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto; margin-top:20px;">
@@ -165,7 +166,7 @@ layout: default
           <td style="padding:0%;width:75%;vertical-align:middle; line-height:1.5;margin-bottom:0.0em;">
             <table style="width:100%;border:0;">
                 <tr>
-                <td style="width:3%;vertical-align:top;text-align:right;padding-right:0em;">{{ counter }}.</td>
+                <td style="width:3%;vertical-align:top;text-align:right;padding-right:0em;">1.</td>
                 <td style="width:97%;text-align:left;">
                   <h4>Transfer learning and meta-learning for drug discovery</h4>
                   <br>
