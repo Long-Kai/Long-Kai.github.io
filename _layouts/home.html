@@ -5,7 +5,6 @@ layout: default
 <div class="top-nav">
   <div class="top-nav-container">
     <a href="#about">About Me</a>
-    <!-- <a href="#news">News</a> -->
     <a href="#publications">Publications</a>
     <a href="#awards">Awards</a>
     <a href="#services">Services</a>
@@ -18,7 +17,7 @@ layout: default
       
       <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;">
         <tr style="padding:0px">
-          <td style="padding:2.5%;width:60%;vertical-align:middle">
+          <td style="padding:2.5% 2.5% 0 2.5%;width:100%;vertical-align:middle">
             <h1>Long-Kai Huang</h1>
             <p style="text-align:center">
               <a href="https://scholar.google.com/citations?user=CaP64WUAAAAJ">Google Scholar</a> &nbsp;/&nbsp; Email: longkai [AT] comp.hkbu.edu.hk 
@@ -26,22 +25,22 @@ layout: default
             <p>I am an Assistant Professor with Department of Computer Science at Hong Kong Baptist University.</p>
             <p>Previously, I was a Senior Research at Tencent AI Lab and Tencent AI for Life Sciences Lab.
               I received my Ph.D. in Computer Science and Engineering from Nanyang Technological University (NTU) Singapore, supervised by Prof. <a href="https://www.cse.cuhk.edu.hk/~sinnopan/">Sinno Jialin Pan</a>, and B.Eng. in Automation from Sun Yat-Sen University, where I did my undergraduate thesis under the supervision of Prof. <a href="https://www.isee-ai.cn/~zhwshi/">Wei-Shi Zheng</a>. </p>
-            <p>My research lies at the intersection of machine learning theory and applications. I am particularly interested in understanding how ML models learn, store, and transfer knowledge, and in using these insights to develop more effective and efficient learning algorithms. My work focuses on continual learning, meta-learning, and efficient training and inference of transformer models. I am also interested in applying AI to scientific discovery, especially in life science domains such as genomics, protein design, and drug discovery.</p>
+            <p style="margin-bottom: 0;">My research lies at the intersection of machine learning theory and applications. I am particularly interested in understanding how ML models learn, store, and transfer knowledge, and in using these insights to develop more effective and efficient learning algorithms. My work focuses on continual learning, meta-learning, and efficient training and inference of transformer models. I am also interested in applying AI to scientific discovery, especially in life science domains such as genomics, protein design, and drug discovery.</p>
           </td>
         </tr>
       </table>
 
-      <table id="news" class="jump-target" style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto; margin-top:5px;">
+      <table id="news" class="jump-target" style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto; margin-top:35px;">
         <tr>
-          <td class="section-divider" style="padding:1%;width:100%;vertical-align:middle">
+          <td class="section-divider" style="padding:0 1% 8px 1%;width:100%;vertical-align:middle">
             <h2 style="margin-bottom:0;">News</h2>
           </td>
         </tr>
       </table>
       <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto; margin-top:5px;">
         <tr>
-          <td style="padding:1%;width:100%;vertical-align:top">
-            <ul class="news-list">
+          <td style="padding:0 1%;width:100%;vertical-align:top">
+            <ul class="news-list" style="margin: 0; padding-left: 18px;">
               <li><em>Ongoing</em>: I am looking for RAs. If you are interested in working with me on related research topics, please email me your CV. </li>
               {% assign cutoff_date = '2025-01-01' | date: "%s" %}
               {% for post in site.posts %}
@@ -59,18 +58,22 @@ layout: default
         </tr>
       </table>
 
-      <table id="publications" class="jump-target" style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto; margin-top:5px;">
+      <table id="publications" class="jump-target" style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto; margin-top:35px;">
         <tr>
-          <td class="section-divider" style="padding:1%;width:75%;vertical-align:middle">
+          <td class="section-divider" style="padding:0 1% 8px 1%;width:100%;vertical-align:middle">
             <h2 style="margin-bottom:0.0em;">Publications |</h2>  <a href="/publications_by_topic"><h2_no_color  style="margin-bottom:0.0em;">Publications by Topic</h2_no_color></a> <h2 style="margin-bottom:0.0em;"> |</h2> <a href="https://scholar.google.com/citations?user=CaP64WUAAAAJ"><h2_no_color  style="margin-bottom:0.0em;">Google Scholar</h2_no_color></a>
+          </td>
+        </tr>
+        <tr>
+          <td style="padding: 8px 1% 0 1%; font-size: 13px; color: #555;">
+            * indicates equal contributions; &dagger; indicates corresponding authors.
           </td>
         </tr>
       </table>
       
       <table style="width:100%;border:0px;border-spacing:5px;border-collapse:separate;margin-right:auto;margin-left:auto;">
-        <tr style="margin-top:5px; margin-bottom:0.0em;padding-left:1em;">* indicates equal contributions; &dagger; indicates corresponding authors.</tr>
         <tr>
-          <td style="padding:1%;width:75%;vertical-align:middle">
+          <td style="padding:1%;width:100%;vertical-align:middle">
             <h3 style="margin-bottom:0.0em;">Conference Papers</h3>
           </td>
         </tr>
@@ -79,7 +82,7 @@ layout: default
         {% for cat in post.categories %}
         {% if cat == 'conference' %}
         <tr>
-          <td style="padding:0%;width:75%;vertical-align:middle; line-height:1.5;margin-bottom:0.0em;">
+          <td style="padding:0%;width:100%;vertical-align:middle; line-height:1.5;margin-bottom:0.0em;">
             <table style="width:100%;border:0;">
                 <tr>
                 <td style="width:3%;vertical-align:top;text-align:right;padding-right:0em;">{{ counter }}.</td>
@@ -116,7 +119,7 @@ layout: default
       
       <table style="width:100%;border:0px;border-spacing:5px;border-collapse:separate;margin-right:auto;margin-left:auto;">
         <tr>
-          <td style="padding:1%;width:75%;vertical-align:middle">
+          <td style="padding:1%;width:100%;vertical-align:middle">
             <h3 style="margin-bottom:0.0em;">Journal Papers</h3>
           </td>
         </tr>
@@ -125,7 +128,7 @@ layout: default
         {% for cat in post.categories %}
         {% if cat == 'journal' %}
         <tr>
-          <td style="padding:0%;width:75%;vertical-align:middle; line-height:1.5;margin-bottom:0.0em;">
+          <td style="padding:0%;width:100%;vertical-align:middle; line-height:1.5;margin-bottom:0.0em;">
             <table style="width:100%;border:0;">
                 <tr>
                 <td style="width:3%;vertical-align:top;text-align:right;padding-right:0em;">{{ counter }}.</td>
@@ -155,12 +158,12 @@ layout: default
 
       <table style="width:100%;border:0px;border-spacing:5px;border-collapse:separate;margin-right:auto;margin-left:auto;">
         <tr>
-          <td style="padding:1%;width:75%;vertical-align:middle">
+          <td style="padding:1%;width:100%;vertical-align:middle">
             <h3 style="margin-bottom:0.0em;">Book Chapter</h3>
           </td>
         </tr>
         <tr>
-          <td style="padding:0%;width:75%;vertical-align:middle; line-height:1.5;margin-bottom:0.0em;">
+          <td style="padding:0%;width:100%;vertical-align:middle; line-height:1.5;margin-bottom:0.0em;">
             <table style="width:100%;border:0;">
                 <tr>
                 <td style="width:3%;vertical-align:top;text-align:right;padding-right:0em;">1.</td>
@@ -177,35 +180,35 @@ layout: default
         </tr>
       </table>
 
-      <table id="awards" class="jump-target" style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto; margin-top:5px;">
+      <table id="awards" class="jump-target" style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto; margin-top:35px;">
         <tr>
-          <td class="section-divider" style="padding:1%;width:100%;vertical-align:middle">
+          <td class="section-divider" style="padding:0 1% 8px 1%;width:100%;vertical-align:middle">
             <h2 style="margin-bottom:0;">Awards</h2>
           </td>
         </tr>
       </table>
       <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto; margin-top:5px;">
         <tr>
-          <td style="padding:1%;width:100%;vertical-align:top">
-            <ul class="news-list">
-              <li><strong><a href="https://blog.iclr.cc/2024/05/06/iclr-2024-outstanding-paper-awards">ICLR 2024 Outstanding Paper Award Honorable Mention</a></li>
+          <td style="padding:0 1%;width:100%;vertical-align:top">
+            <ul class="news-list" style="margin: 0; padding-left: 18px;">
+              <li><strong><a href="https://blog.iclr.cc/2024/05/06/iclr-2024-outstanding-paper-awards">ICLR 2024 Outstanding Paper Award Honorable Mention</a></strong></li>
               <li><a href="https://iclr.cc/Conferences/2024/Reviewers#outstanding-reviewers">ICLR 2024 Outstanding Reviewer</a></li>
             </ul>
           </td>
         </tr>
       </table>
 
-      <table id="services" class="jump-target" style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto; margin-top:5px;">
+      <table id="services" class="jump-target" style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto; margin-top:35px;">
         <tr>
-          <td class="section-divider" style="padding:1%;width:100%;vertical-align:middle">
+          <td class="section-divider" style="padding:0 1% 8px 1%;width:100%;vertical-align:middle">
             <h2 style="margin-bottom:0;">Services</h2>
           </td>
         </tr>
       </table>
       <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto; margin-top:5px;">
         <tr>
-          <td style="padding:1%;width:100%;vertical-align:top">
-            <ul class="news-list">
+          <td style="padding:0 1%;width:100%;vertical-align:top">
+            <ul class="news-list" style="margin: 0; padding-left: 18px;">
               <li><strong>Area Chair</strong>: ICML26, ICLR25 </li>
               <li><strong>Senior Meta Reviewer</strong>: ICME26, PRCV26, PRCV25</li>
             </ul>
@@ -213,10 +216,9 @@ layout: default
         </tr>
       </table>
 
-      <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;">
+      <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto; margin-top:40px;">
       <tr>
         <td style="padding:0px; text-align:right;">
-          <br>
           <h5>
             Source code of this website adapted from 
             <a href="https://jonbarron.info"><h5>this page.</h5></a>
