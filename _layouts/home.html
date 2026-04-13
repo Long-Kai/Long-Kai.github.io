@@ -100,11 +100,11 @@ layout: default
                   <br>
                   In <em>{{ post.venue }}</em>
                   {% if post.abbr %}
-                  (<strong>{{ post.abbr }}</strong>)
+                  (<strong>{{ post.abbr }}</strong>),
                   {% endif %}
-                  , {{ post.year }}
+                  {{ post.year }}
                   {% if post.award %}
-                  <strong><emph>{{ &nbsp; post.award }}</emph></strong>
+                   (<strong><emph>{{ post.award }}</emph></strong>)
                   {% endif %}
                 </td>
               </tr>
