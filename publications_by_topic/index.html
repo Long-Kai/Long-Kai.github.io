@@ -30,7 +30,7 @@ title: Publications by Topic
         {% for topic in topics_list %}
           <span style="white-space: nowrap;">
             <a href="#{{ topic | slugify }}" style="font-weight: 600; text-decoration: none;">
-              {% if topic == 'AI4Sci' %}AI for Science{% elsif topic == 'LLMs' %}LLMs / ViTs{% elsif topic == 'Optimization' %}Optimization / Generalization{% else %}{{ topic }}{% endif %}
+              {% if topic == 'AI4Sci' %}AI for Science{% elsif topic == 'LLMs' %}Transformers{% elsif topic == 'Optimization' %}Optimization / Generalization{% else %}{{ topic }}{% endif %}
             </a>
             {% unless forloop.last %}
               <span style="color: #ccc; margin: 0 10px;">|</span>
@@ -48,7 +48,7 @@ title: Publications by Topic
               {% if topic == 'AI4Sci' %}
               <h3 style="margin-bottom:0.0em;">AI for Science / Biological Language Models</h3>
               {% elsif topic == 'LLMs' %}
-              <h3 style="margin-bottom:0.0em;">LLMs / ViTs </h3>
+              <h3 style="margin-bottom:0.0em;"> Transformers (LLMs / ViTs) </h3>
               {% elsif topic == 'Optimization' %}
               <h3 style="margin-bottom:0.0em;">Optimization / Generalization </h3>
               {% else %}
