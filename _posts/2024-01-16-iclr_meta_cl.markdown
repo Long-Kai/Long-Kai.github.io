@@ -5,6 +5,6 @@ topics: ["Continual Learning", "Meta Learning", "Optimization"]
 authors: "Yichen Wu, <strong>Long-Kai Huang</strong><sup>&dagger;</sup>, Renzhen Wang, Deyu Meng, Ying Wei<sup>&dagger;</sup>"
 venue: "International Conference on Learning Representations"
 abbr: "ICLR"
-award: "Oral, Outstanding Paper Award Honorable Mention"
+award: "Oral, Outstanding Paper Honorable Mention"
 year: "2024"
 ---
