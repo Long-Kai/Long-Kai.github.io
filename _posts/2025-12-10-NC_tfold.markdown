@@ -3,7 +3,7 @@ title:  "De Novo Design of Epitope-specific Antibodies via a Structure-driven Co
 categories: journal
 topics: ["AI4Sci", "Protein Design"]
 authors: "Fandi Wu, Yu Zhao, JiaXiang Wu, Biaobin Jiang, Bing He, <strong>Long-Kai Huang</strong>, and other 17 authors."
-venue: "Nature Communication"
+venue: "Nature Communications"
 abbr: "NC"
 year: "2025"
 ---
